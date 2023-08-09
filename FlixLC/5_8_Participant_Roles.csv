@@ -1,0 +1,21 @@
+RoleID,RoleDescription
+r101, Actor
+r102, Director
+r103, Producer
+r104, Executive Producer
+r105, Co-Producer
+r106, Assistant Producer
+r107, Screenwriter
+r108, Composer
+r109, Line producer
+r110, Unit manager
+r111, Production coordinator
+r112, First assistant director
+r113, Second assistant director
+r114, Other assistant directors
+r115, Production accountant
+r116, Location manager
+r117, Assistant location manager
+r118, Legal counsel
+r119, Script supervisor
+r120, Casting director

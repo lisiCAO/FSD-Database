@@ -258,9 +258,11 @@ Transactions - 2
 -- Drop a constraint 
 
 -- remove the check constraint 
+/*
 alter table table_name
 	drop check ck_constraint_name
 ;
+
    
 -- remove the foreign key constraint 
 alter table table_name
@@ -281,3 +283,4 @@ alter table table_name
 alter table table_name
 	drop primary key
 ;
+/*

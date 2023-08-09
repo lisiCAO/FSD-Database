@@ -6,22 +6,25 @@ provides information about the DVIDs, records rental transactions, and stores th
 Developed by: Lisi Cao*/
 
 --  create FlixLC
-create database FlixLC
+create database flixlc
 ;
 
 -- switch to the Flix database
 
 -- use database_name
-use FlixLC
+use flixlc
 ;
+
 
 /*using the schema command to create a new database in MySQL.
 Note: Creating schema in Microsoft SQL Server has different meaning.
 */
 
+/*
 -- creating a new database using command schema 
-create schema DB1
+create schema db1
 ;
+*/
 -- show the character set and collation in MySQl
 show character set
 ;
@@ -33,9 +36,6 @@ show collation
 show databases
 ;
 
--- switch to FlixLC
-use FlixLC
-;
 -- show Flix table object
 show tables
 ;

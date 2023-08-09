@@ -7,17 +7,17 @@ use FlixLC
 
 /* ******************************************* */
 show variables like 'secure_file_priv'
--- 'secure_file_priv', 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\'
+-- 'secure_file_priv', '/Users/lisicao/Desktop/FSD-DATABASE/'
 ;
 
 show global variables like 'local_infile'
 ;
 
-set global local_variable = 'ON' -- or 1
+set global local_infile = 'ON' -- or 1
 ;
 
 /* load data from external csv file */
-load data infile '/Users/caolisi/Desktop/work-FSD/Database/week2/class2/Participant_Roles.csv'
+load data infile '/Users/lisicao/Desktop/FSD-DATABASE/FlixLC/5_8_Participant_Roles.csv'
 into table Roles
 fields terminated by ','
 lines terminated by '\r\n'
@@ -192,6 +192,19 @@ VALUES
 select *
 from Employees
 ;
+-- drop foreign key in the order
+alter table orders
+	drop foreign key fk_Orders_Customers;
+
+-- alter primary constraint for customer
+alter table Customers
+	modify column CustID smallint auto_increment
+    ;
+
+-- add foreign key CustID in the order
+alter table orders
+	add constraint fk_Orders_Customers foreign key Orders(CustID) references Customers(CustID);
+    
 /* Inserts into the Customers table */
 INSERT INTO Customers (CustFN, CustMN, CustLN)
 VALUES 

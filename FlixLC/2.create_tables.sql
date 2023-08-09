@@ -25,10 +25,10 @@ varchar(length) -variable length
 /* ***** Table NO.1 - Customers   ***** */
 create table Customers 
 (
-	CustID smallint primary key not null,
-    CustFN varchar(20) not null,
-    CustMN varchar(20) null, -- option (null is the default value)
-    CustLN varchar(20) not null
+	Custid smallint primary key not null,
+    Custfn varchar(20) not null,
+    Custmn varchar(20) null, -- option (null is the default value)
+    Custln varchar(20) not null
     )
 ;
 
@@ -71,7 +71,7 @@ create table MovieTypes
 (
 	MTypeID varchar(4) not null, -- required
     MTypeDescrip varchar(30) not null, 
-    constraint pk_MovieTypes primary key clustered (MTyeID asc)
+    constraint pk_MovieTypes primary key clustered (MTypeID asc)
 )
 ;
 /* ******* Table NO. 4 - Studios    **** */ 
@@ -134,9 +134,10 @@ alter table table_name
 /* add a primary key to a table
 alter table table_name
 	add constraint constraint_name contraint_type */
-alter table Formats
+/* alter table Formats
 	add constraint pk_Formats primary key (FormID asc)
 ;
+*/
 
 /* remove the primary key constraint 
 alter table a time_name
@@ -278,7 +279,7 @@ where table_schema = 'FlixLC'
 and table_type = 'BASE TABLE'
 ;
 
-/* How many tables in database Flix23H2 */
+/* How many tables in database FlixLC */
 select count(table_name) as `No. of tables in database Flix` -- 'No. of tables in database Flix'
 from information_schema.TABLES
 where table_schema = 'FlixLC'
