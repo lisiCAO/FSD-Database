@@ -1,0 +1,40 @@
+﻿,,,,,,,,
+Entity,Attributes,Type,Length,Constraints,Required,Description,reference,format
+Employee,EmployeeID,smallint,,Primary Key,Yes,Unique identifier for each employee,,
+,LastName,varchar,20,,Yes,Employee's last name,,
+,MiddleName,varchar,20,,No,Employee's middle name,,
+,FirstName,varchar,20,,Yes,Employee's first name,,
+,Gender,varchar,6,,Yes,Employee's gender,,
+,Address1Line,varchar,200,,Yes,Street number and street name,, 
+,Addrees2Line,varchar,20,,No,Appartment number or unit number,,"unit, app"
+,PostCode,varchar,7,,Yes,Employee's home post code,,H9H 0A0
+,City,varchar,20,,Yes,Employee's city,,
+,Province,char,2,,Yes,Employee's province,,QC
+,Country,varchar,20,,Yes,Employee's country,,
+,SIN,smallint,,,Yes,Social Insurance Number,,999-999-999
+,JobID,smallint,,,Yes,Employe's job ID,Job,
+,HourlyWage,float,-,Positive,Yes,Employee's hourly wage,,15.25
+,Seniority,tinyint,,,Yes,Years of seniority of the employee,,
+,DepartmentID,smallint,,Foreign Key,Yes,ID of the department the employee works in,Department,
+,EmploymentStatus,varchar,20,,Yes,Full time or part time status of the employee,,
+Department,DepartmentID,smallint,,Primary Key,Yes,Unique identifier for each department,,
+,DepartmentName,varchar,20,,Yes,Name of the department,,
+Absence,AbsenceID,smallint,,Primary Key,Yes,Unique identifier for each absence,,
+,EmployeeID,smallint,,Foreign Key ,Yes,ID of the absent employee,Employee,
+,StartDate,Date,-,,Yes,Start date of absence,,YYYY-MM-DD
+,EndDate,Date,-,> StartDate,Yes,End date of absence,,YYYY-MM-DD
+,AbsenceID,smallint,,,Yes,ID of Absence Tpye,AbsenceType,
+,Note,varchar,200,,No,Personal note related to the absence,,
+Overtime,OvertimeID,smallint,,Primary Key,Yes,Unique identifier for each overtime record,,
+,EmployeeID,smallint,,Foreign Key,Yes,ID of the employee who worked overtime,Employee,
+,Date,Date,-,,Yes,Date of the overtime,,YYYY-MM-DD
+,HoursWorked,Float,-,,Yes,Number of actual hours worked overtime,,
+,RepaymentRatio,Float,-,,Yes,Ratio of overtime repayment,,"1, 1.5, 2, -1"
+,NewBalance,Float,-,,Yes,New balance of overtime after the record,,
+,Note,varchar,500,,No,Personal note related to the overtime,,
+Job,JobID,smallint,,Primary Key,Yes,Job's unique number,,
+,JobCat,varchar,20,,Yes,Job's catogary,,
+,JobDesc,varchar,200,,Yes,Description of job,,
+AbsenceType,AbsenceTypeID,smallint,,Primary Key,Yes,ID of Absence Tpye,,
+,AbsenceTypeName,varchar,20,,Yes,Name of Absence,,
+,IsPaid,Boolean,-,,Yes,Whether the days off are paid or not,,Yes/No
