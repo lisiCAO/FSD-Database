@@ -1,42 +1,27 @@
-# Compiled class files
-*.class
+# 配置文件
+.env
+config.json
 
-# Build directories (Maven, Gradle, etc.)
-target/
-build/
-out/
-
-# Package files
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# Logs and databases
-*.log
-*.sql
-*.sqlite
-
-# IDE-specific files (e.g., IntelliJ, Eclipse)
-.idea/
-*.iml
-*.iws
-*.prefs
-*.classpath
-*.project
-.settings/
-
-# System files
+# 系统文件
 .DS_Store
 Thumbs.db
 
-# Temporary files
-*~
-*.swp
-*.bak
+# IDE/编辑器特定文件
+.vscode/
+.idea/
+*.sublime-project
 
-# Other common tools
+# 依赖项
+node_modules/
+
+# 日志文件
+*.log
+
+# 临时文件
+tmp/
+temp/
+build/
 bin/
-.gradle/
+
+# 大型数据文件
+# *.sql  # 如果您不想包括大型 SQL 文件
