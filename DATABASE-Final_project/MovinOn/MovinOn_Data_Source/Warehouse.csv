@@ -1,0 +1,4 @@
+wh_id,zip,phone,has_climate_control,has_security_gate,address,city,state
+OR-1,97212,5035512423,0,1,#3 Industrial Park Way,Portland,OR
+WA-1,98121,2063242312,1,1,8798 Warehouse Rd,Seattle,WA
+WY-1,83001,3075413571,1,0,54781 Hixson Pike,Jackson Hole,WY

@@ -8,7 +8,7 @@ SELECT
     CASE
 		WHEN salary IS NOT NULL THEN salary
         ELSE hourly_rate * 2000
-	END AS 'Annual Salary'
+    END AS 'Annual Salary'
 FROM employee
-ORDER BY 'Annual Salary' DESC
+ORDER BY `Annual Salary` DESC
 LIMIT 1;
