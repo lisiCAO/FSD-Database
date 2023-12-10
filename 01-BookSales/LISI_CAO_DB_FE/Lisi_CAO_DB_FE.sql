@@ -1,11 +1,6 @@
 /* Database Final Exam Data - August 2023
 FSD-10
-Your Name: Lisi Cao (2387145)
-
-• THIS IS A CLOSE BOOK EXAM. 
-• Save this file as Your_Name_DB_FE. 
-• Submit only this script with all your answers.
-• The Exam duration is 3 hours.
+Name: Lisi Cao 
 
 Create the BookSales database that contains five tables: 
 1) Authors, 
@@ -29,7 +24,7 @@ The numbers are used because some tables might include multiple foreign keys in 
 one or more of those keys are made up of more than one column. The foreign keys in the 
 AuthorBook table participate in one-to-many relationships with the Authors table and the Books table.
 
-There are generally four steps that you should follow when developing a data model:
+There are generally four steps involved in developing a data model:
 ❑ Identifying the potential entities that will exist in the database
 ❑ Normalizing the data design to support data storage in the identified entities
 ❑ Identifying the relationships that exist between tables
@@ -41,10 +36,10 @@ that represent the type of data stored in your database. The purpose of this ste
 any types of information, categories, or actions that require the storage of data in the database. 
 */
 
-/* ***** Write your answer under each question. ***** */
+
 
 /* ******************************************** */
-/* 1. Create the BookSales_Your_FirstName database that  */
+/* 1. Create the BookSales database that  */
 CREATE DATABASE booksales_lisi
 ;
 GO
@@ -173,7 +168,7 @@ ADD AuthorAddress VARCHAR(100) NOT NULL,
 GO
 
 /* ******************************************** */
-/* 4. Implementing Data Integrity by Using Constraints
+/* 4. Implementing Data Integrity by Using Constraints */
 /* ******************************************** */
 
 -- Foreign key constraint(s)
@@ -240,7 +235,7 @@ Data files are attached to the exam as csv files.
 
 -- 5.1. Publishers table
 BULK INSERT pub.Publishers
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-final_exam/LISI_CAO_DB_FE/Book_Sales_Sample_Data/publishers.csv'
+FROM './Book_Sales_Sample_Data/publishers.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -253,7 +248,7 @@ GO
 /* ******************************************** */
 -- 5.2. Authors table
 BULK INSERT auth.Authors
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-final_exam/LISI_CAO_DB_FE/Book_Sales_Sample_Data/authors.csv'
+FROM './LISI_CAO_DB_FE/Book_Sales_Sample_Data/authors.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -267,7 +262,7 @@ GO
 /* ******************************************** */
 -- 5.3. AuthorBook table
 BULK INSERT auth.AuthorBook
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-final_exam/LISI_CAO_DB_FE/Book_Sales_Sample_Data/author_book.csv'
+FROM './Book_Sales_Sample_Data/author_book.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -281,7 +276,7 @@ GO
 /* ******************************************** */
 -- 5.4. BookPublisher table
 BULK INSERT pub.BookPublisher
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-final_exam/LISI_CAO_DB_FE/Book_Sales_Sample_Data/book_publisher.csv'
+FROM './Book_Sales_Sample_Data/book_publisher.csv'
 WITH
 (
     FIRSTROW = 2,

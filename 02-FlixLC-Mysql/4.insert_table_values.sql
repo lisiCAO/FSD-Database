@@ -7,7 +7,7 @@ use FlixLC
 
 /* ******************************************* */
 show variables like 'secure_file_priv'
--- 'secure_file_priv', '/Users/lisicao/Desktop/FSD-DATABASE/'
+-- 'secure_file_priv', '/FSD-DATABASE/'
 ;
 
 show global variables like 'local_infile'
@@ -17,7 +17,7 @@ set global local_infile = 'ON' -- or 1
 ;
 
 /* load data from external csv file */
-load data infile '/Users/lisicao/Desktop/FSD-DATABASE/FlixLC/5_8_Participant_Roles.csv'
+load data infile './FSD-DATABASE/FlixLC/5_8_Participant_Roles.csv'
 into table Roles
 fields terminated by ','
 lines terminated by '\r\n'

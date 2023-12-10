@@ -14,7 +14,7 @@
 -- 4.1 Employee Position Table
 
 BULK INSERT HR.employee_position
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/EmployoeePosition.csv'
+FROM './MovinOn_Data_Source/EmployoeePosition.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -26,7 +26,7 @@ GO
 
 -- 4.2 Employee Table
 BULK INSERT HR.employee
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/Employees.csv'
+FROM './MovinOn_Data_Source/Employees.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -38,7 +38,7 @@ GO
 
 
 BULK INSERT HR.driver
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/Drivers.csv'
+FROM './MovinOn_Data_Source/Drivers.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -48,7 +48,7 @@ WITH
 GO
 
 BULK INSERT inventory.vehicle
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/Vehicles.csv'
+FROM './MovinOn_Data_Source/Vehicles.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -58,7 +58,7 @@ WITH
 GO
 
 BULK INSERT inventory.warehouse
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/Warehouse.csv'
+FROM './MovinOn_Data_Source/Warehouse.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -68,7 +68,7 @@ WITH
 GO
 
 BULK INSERT inventory.storage_unit
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/StorageUnits.csv'
+FROM './MovinOn_Data_Source/StorageUnits.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -78,7 +78,7 @@ WITH
 GO
 
 BULK INSERT Operations.job_order
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/JobOrders.csv'
+FROM './MovinOn_Data_Source/JobOrders.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -88,7 +88,7 @@ WITH
 GO
 
 BULK INSERT Operations.lease
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/UnitRentals.csv'
+FROM './MovinOn_Data_Source/UnitRentals.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -98,7 +98,7 @@ WITH
 GO
 
 BULK INSERT Clients.customer
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/Customers.csv'
+FROM './MovinOn_Data_Source/Customers.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -108,7 +108,7 @@ WITH
 GO
 
 BULK INSERT Operations.job_detail
-FROM '/Users/caolisi/Desktop/FSD-Database/FSD-Database/DATABASE-Final_project/MovinOn/MovinOn_Data_Source/JobDetails.csv'
+FROM './MovinOn_Data_Source/JobDetails.csv'
 WITH
 (
     FIRSTROW = 2,
